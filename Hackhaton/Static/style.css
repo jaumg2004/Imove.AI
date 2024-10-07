@@ -73,3 +73,9 @@ input {
     width: 100%;
     box-sizing: border-box;
 }
+
+.logo {
+    width: 240px;
+    height: 80px;
+
+}

@@ -13,9 +13,9 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__, template_folder='Template', static_folder='Static')
 
 # Chaves das APIs
-GOOGLE_MAPS_API_KEY = 'SUA CHAVE API DO GOOGLE MAPS'
-CRIMEOMETER_API_KEY = 'SUA CHAVE API DA CRIMEOMETER'
-OPENAI_API_KEY = 'SUA CHAVE API DA OPENAAI'
+GOOGLE_MAPS_API_KEY = 'AIzaSyADr2mUSFjcUkCvFy5FHw6Pd95ROxMzg6U'
+CRIMEOMETER_API_KEY = ''
+OPENAI_API_KEY = 'sk-ea3h6fvjXLhkb7txgn0aUHuokQMf4GP_Tmj3KhMv0VT3BlbkFJAVg_3xy_TjFZ6qUpapgpFdkfRLtaF-2UAERZyovoMA'
 
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 previous_messages = []
@@ -50,16 +50,18 @@ def fetch_response_from_api(user_input):
 
     # Envia a solicitação para a API do OpenAI
     response = requests.post(url, headers=headers, data=json.dumps(body))
+
+    # Adicione isto para ver a resposta completa
+    print(response.json())
+
     response_data = response.json()
 
-    # Retorna a resposta do assistente
-    response_content = response_data['choices'][0]['message']['content'].strip()
-
-    # Simula o tempo de digitação (por exemplo, 2 segundos)
-    typing_delay = random.uniform(1, 3)  # Tempo de espera aleatório entre 1 e 3 segundos
-    time.sleep(typing_delay)
-
-    return response_content
+    # Verifique se 'choices' está presente antes de tentar acessá-lo
+    if 'choices' in response_data:
+        return response_data['choices'][0]['message']['content'].strip()
+    else:
+        print("Erro: 'choices' não encontrado na resposta da API")
+        return "Desculpe, algo deu errado ao processar sua solicitação."
 
 # Funções para obter dados de localização e segurança
 def get_location_data(address):
