@@ -13,9 +13,9 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__, template_folder='Template', static_folder='Static')
 
 # Chaves das APIs
-GOOGLE_MAPS_API_KEY = 'AIzaSyADr2mUSFjcUkCvFy5FHw6Pd95ROxMzg6U'
-CRIMEOMETER_API_KEY = ''
-OPENAI_API_KEY = 'sk-ea3h6fvjXLhkb7txgn0aUHuokQMf4GP_Tmj3KhMv0VT3BlbkFJAVg_3xy_TjFZ6qUpapgpFdkfRLtaF-2UAERZyovoMA'
+GOOGLE_MAPS_API_KEY = 'SUA CHAVE API DO GOOGLE MAPS'
+CRIMEOMETER_API_KEY = 'SUA CHAVE API DA CRIMEOMETER'
+OPENAI_API_KEY = 'SUA CHAVE API DA OPENAAI'
 
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 previous_messages = []
