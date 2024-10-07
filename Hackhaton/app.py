@@ -100,7 +100,7 @@ def index():
 
 @app.route('/prever_preco', methods=['POST'])
 def prever_preco():
-    base = pd.read_csv('C:/Users/Jaum/Downloads/real_estate_sample.csv')
+    base = pd.read_csv(r'C:\Users\Jaum\Downloads\imoveis.csv')
     base = base.drop(['Unnamed'], axis=1)
     y = base['price'].values
     X = base.drop('price', axis=1).values
