@@ -1,0 +1,72 @@
+body {
+    background-color: #121212; /* Fundo escuro */
+    color: #E0E0E0; /* Texto claro */
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1F1F1F; /* Fundo mais escuro no cabeçalho */
+    color: #FFA500; /* Texto laranja */
+    padding: 1em;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #E0E0E0; /* Títulos com cor clara */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+#chat-box {
+    background-color: #1F1F1F; /* Fundo escuro para o chat */
+    color: #E0E0E0; /* Texto claro */
+    border: 1px solid #333333; /* Bordas mais escuras */
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.chat-container {
+    display: flex;
+}
+
+.chat-container input {
+    background-color: #2C2C2C; /* Fundo escuro para o campo de entrada */
+    color: #E0E0E0; /* Texto claro */
+    border: 1px solid #333333; /* Bordas mais escuras */
+    padding: 10px;
+    flex: 1;
+}
+
+.chat-container button {
+    padding: 10px;
+    background-color: #0288D1; /* Botão com cor de destaque */
+    color: #FFF; /* Texto branco no botão */
+    border: none;
+    cursor: pointer;
+}
+
+.chat-container button:hover {
+    background-color: #026C9E; /* Cor mais escura ao passar o mouse */
+}
+
+.analysis-container {
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: #2C2C2C; /* Fundo escuro para os inputs */
+    color: #E0E0E0; /* Texto claro */
+    border: 1px solid #333333;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}

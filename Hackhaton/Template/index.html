@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imove.AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Imove.AI</h1>
+</header>
+<main>
+    <h2>Chatbot para Suporte ao Cliente</h2>
+    <div id="chat-box">
+        <div id="chatbox"></div>
+        <div class="chat-container">
+            <input type="text" id="user_input" placeholder="Digite sua mensagem..."/>
+            <button id="send_btn">Enviar</button>
+        </div>
+    </div>
+
+    <h2>Previsão de Preço de Imóveis</h2>
+    <div class="analysis-container">
+        <input type="number" id="quartos" placeholder="Número de Quartos"/>
+        <input type="number" id="banheiros" placeholder="Número de Banheiros"/>
+        <input type="number" id="area" placeholder="Área em m²"/>
+        <input type="number" id="garagem" placeholder="Número de Vagas na Garagem"/>
+        <button id="predict_price_btn">Prever Preço</button>
+    </div>
+    <div id="predicted_price"></div>
+
+    <h2>Análise de Segurança</h2>
+    <div class="analysis-container">
+        <input type="text" id="address" placeholder="Endereço"/>
+        <button id="analyze_safety_btn">Analisar Segurança</button>
+    </div>
+    <div id="safety_analysis"></div>
+</main>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
