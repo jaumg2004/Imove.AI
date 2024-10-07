@@ -10,12 +10,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
 
-app = Flask(__name__, template_folder='Template')
+app = Flask(__name__, template_folder='Template', static_folder='Static')
 
 # Chaves das APIs
-GOOGLE_MAPS_API_KEY = 'SUA CHAVE API DO GOOGLE MAPS'
-CRIMEOMETER_API_KEY = 'SUA CHAVE API DA CRIMEOMETER'
-OPENAI_API_KEY = 'SUA CHAVE API DA OPENAI'
+GOOGLE_MAPS_API_KEY = 'AIzaSyADr2mUSFjcUkCvFy5FHw6Pd95ROxMzg6U'
+CRIMEOMETER_API_KEY = ''
+OPENAI_API_KEY = 'sk-ea3h6fvjXLhkb7txgn0aUHuokQMf4GP_Tmj3KhMv0VT3BlbkFJAVg_3xy_TjFZ6qUpapgpFdkfRLtaF-2UAERZyovoMA'
 
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 previous_messages = []

@@ -7,14 +7,17 @@ body {
 }
 
 header {
-    background-color: #1F1F1F; /* Fundo mais escuro no cabeçalho */
-    color: #FFA500; /* Texto laranja */
+    background-color: #1F1F1F;
+    color: red;
     padding: 1em;
     text-align: center;
 }
 
-h1, h2 {
-    color: #E0E0E0; /* Títulos com cor clara */
+h1{
+    color: darkorange;
+}
+h2 {
+    color: #E0E0E0;
 }
 
 main {
