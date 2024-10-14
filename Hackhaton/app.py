@@ -13,9 +13,9 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__, template_folder='Template', static_folder='Static')
 
 # Chaves das APIs
-GOOGLE_MAPS_API_KEY = 'AIzaSyADr2mUSFjcUkCvFy5FHw6Pd95ROxMzg6U'
-CRIMEOMETER_API_KEY = ''
-OPENAI_API_KEY = 'sk-ea3h6fvjXLhkb7txgn0aUHuokQMf4GP_Tmj3KhMv0VT3BlbkFJAVg_3xy_TjFZ6qUpapgpFdkfRLtaF-2UAERZyovoMA'
+GOOGLE_MAPS_API_KEY = 'SUA CHAVE API GOOGLEMAPS'
+CRIMEOMETER_API_KEY = 'SUA CHAVE API CRIMEOMETER'
+OPENAI_API_KEY = 'SUA CHAVE API OPENAI'
 
 gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 previous_messages = []
@@ -102,7 +102,7 @@ def index():
 
 @app.route('/prever_preco', methods=['POST'])
 def prever_preco():
-    base = pd.read_csv(r'C:\Users\Jaum\Downloads\imoveis.csv')
+    base = pd.read_csv(r'diretório da sua tabela de dados')
     base = base.drop(['Unnamed'], axis=1)
     y = base['price'].values
     X = base.drop('price', axis=1).values
@@ -131,7 +131,7 @@ def analisar_seguranca():
         neighborhood_quality = get_neighborhood_quality(lat, lng)
 
         # Carregar a base de dados de segurança
-        base = pd.read_csv('C:/Users/Jaum/Downloads/classificacao_seguranca.csv')
+        base = pd.read_csv('diretório da sua tabela de dados')
         base['taxas de criminalidade'] = crime_rate
         base['presença de policiamento'] = policing_presence
         base['qualidade da vizinhança'] = neighborhood_quality
